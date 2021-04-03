@@ -9,13 +9,13 @@ function App() {
   const [newFoodName, setNewFoodName] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/read").then((response) =>
+    Axios.get("https://merncrud-app.herokuapp.com/read").then((response) =>
       setFoodList(response.data)
     );
   }, []);
 
   const addToDatabase = () => {
-    Axios.post("http://localhost:3001/insert", {
+    Axios.post("https://merncrud-app.herokuapp.com/insert", {
       foodName: foodName,
       calories: calories,
     });
@@ -24,7 +24,7 @@ function App() {
   };
 
   const updateFood = (id) => {
-    Axios.put("http://localhost:3001/update", {
+    Axios.put("https://merncrud-app.herokuapp.com/update", {
       id: id,
       newFoodName: newFoodName,
     });
@@ -33,7 +33,7 @@ function App() {
   };
 
   const deleteFood = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`);
+    Axios.delete(`https://merncrud-app.herokuapp.com/delete/${id}`);
     window.location.reload();
   };
 
