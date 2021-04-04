@@ -50,6 +50,7 @@ function App() {
           <input type="number" onChange={(e) => setCalories(e.target.value)} />
         </div>
         <button onClick={addToDatabase}>Add to Database</button>
+        <button onClick={() => window.location.reload()}>Refresh list</button>
 
         <h2>Food List</h2>
         {foodList.map((food, key) => (
