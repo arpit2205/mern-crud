@@ -34,6 +34,7 @@ function App() {
 
   const deleteFood = (id) => {
     Axios.delete(`https://merncrud-app.herokuapp.com/delete/${id}`);
+
     // window.location.reload();
   };
 
