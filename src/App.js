@@ -20,7 +20,7 @@ function App() {
       calories: calories,
     });
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   const updateFood = (id) => {
@@ -29,12 +29,12 @@ function App() {
       newFoodName: newFoodName,
     });
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   const deleteFood = (id) => {
     Axios.delete(`https://merncrud-app.herokuapp.com/delete/${id}`);
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
